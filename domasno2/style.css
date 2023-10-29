@@ -1,0 +1,65 @@
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/07/23/14/pizza-5143513_640.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+h1{
+    
+    color: rgb(244, 211, 205);
+    -webkit-text-stroke: 2px tomato;
+
+    font-style: oblique;
+    font-size: 500%;
+    position: relative;
+    margin-right: auto;
+    text-align: center;
+    left: 15%;
+}
+.pomesti{
+    position: relative;
+    right:18%;
+}
+
+table{
+    width: 500px;
+    height: 450px;
+    border: 10px white;
+    border-style: solid;
+    border-top-style: none;
+    border-collapse: collapse;
+
+    font-family: Tahoma;
+	font-size: 17px;
+    text-align: center;
+    
+    color:white;
+    
+}
+
+#boja1{
+    background-color: tomato;
+}
+
+#boja2{
+    background-color: #b30000;
+}
+#grad{
+    background: linear-gradient(to right, #f7beb1, #e88543, #f6d73d);
+}
+.bold{
+    font-weight:bold;
+}
+
+.box{
+    background-color:black;
+    color:white;
+}
+
+#slika{
+    background-image: url("https://t3.ftcdn.net/jpg/02/75/92/44/360_F_275924424_TLprAsDUwMcepROXrOD6DQFkMq3nFfQY.jpg");
+    background-size:cover;
+}
+#crna{
+    background-color:black;
+}
