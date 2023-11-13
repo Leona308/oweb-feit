@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS THE WORD!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="box1 box3">WORD GUESS</h1>
+    <h2 class="box1 box3">Rules</h2>
+    <div class="box1 box2 box4">
+        <ul>
+            <li>There are 20 words, from which one will be chosen randomly for the game.</li>
+            <li>The words should be a maximum of 8 letters long, with 3 letters revealed at the start of the game.</li>
+            <li>You have 5 chances to get the word right.</li>
+        </ul>
+    </div>
+    <h3 class="box1 box3"> &#129310; GOOD LUCK &#129310;</h3> 
+
+    <p class="box1 box2">Guess the word</h1>
+    <p id="word" class="box1 box2 box5"></p>
+    <p class="box1 box2"id="attempts">Attempts: <span id="attemptsCount">0</span></p>
+    <input type="text" id="guessInput" maxlength="8" class="box1 box2"> 
+    <button onclick="checkGuess()" class="box1 box2">Check the word</button>
+    </h4>
+    
+    <script>
+        let words=["hospital", "positive", "triangle", "birthday", "festival", "sunshine", "cylinder", "optimism", "geometry", "carnival", "princess", "caffeine", "deadlift", "cinnamon", "cucumber", "watermelon", "hangover", "protein", "mushroom", "hardware"];
+        let maxAttempts = 5;
+        let currentWord = "";
+        let displayedWord = [];
+        let attempts = 0;
+
+        function startGame() {
+            currentWord = words[Math.floor(Math.random() * words.length)];
+            displayedWord = currentWord.substring(0, 3).split('').concat(new Array(currentWord.length - 3).fill('\u2B1C'));
+            attempts = 0;
+
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.getElementById('word').textContent = displayedWord.join(' ');
+            document.getElementById('attemptsCount').textContent = attempts;
+        }
+
+        function checkGuess() {
+            let guess = document.getElementById('guessInput').value.toLowerCase();
+
+            if (/^[a-z]+$/.test(guess)) {
+                if (guess.length === currentWord.length) {
+                    if (guess === currentWord) {
+                        alert('Great job!');
+                        startGame();
+                    } else {
+                        attempts++;
+                        if (attempts >= maxAttempts) {
+                            alert('Oh no, you guessed wrong. The word was: ' + currentWord);
+                            startGame();
+                        }
+                    }
+                    updateDisplay();
+                } else {
+                    alert('You should only guess 8 letter words');
+                }
+            } else {
+                alert('You should only use letters');
+            }
+
+            document.getElementById('guessInput').value = '';
+        }
+
+        
+        startGame();
+    </script>
+
+</body>
+</html>

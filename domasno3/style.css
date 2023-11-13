@@ -1,0 +1,38 @@
+body {
+    background-image: url("https://cdn.windowsreport.com/wp-content/uploads/2020/06/Scrabble-930x620.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    text-align: center;
+
+    color:white;
+
+}
+.box1{
+    position: relative;
+    left: 20%;
+}
+
+.box2{
+    font-family: Tahoma;
+    font-size: 17px;
+    text-align: center;
+    
+}
+
+.box3{
+    color: rgb(6, 41, 68);
+
+}
+
+.box4{
+    display:inline-block;
+    background-color:rgba(144, 0, 255, 0.796);
+}
+
+.box5{
+    display:inline-block;
+    background-color:rgba(255, 0, 187, 0.796);
+    font-size:30px;
+}
+
