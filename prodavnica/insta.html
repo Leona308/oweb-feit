@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/39417c7ec1.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="prodavnica.css">
+    <script src='prodavnica.js'></script>
+    <title>Glossier</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><strong>Glossier</strong></div> 
+        <ul>
+            <li><a href="prodavnica.html" class="kopce">Login</a></li>
+        </ul>
+        <nav>
+                <ul class="nav_links">
+                    <li><a href="pocetna.html">Home</a></li>
+                    <li><a href="makeup.html">Makeup</a></li>
+                    <li><a href="skincare.html">Skincare</a></li>
+                    <li><a href="body.html">Body</a></li>
+                    <li><a href="insta.html">Instagram</a></li>
+                    <li><a href="impressions.html">Your impressions</a></li>
+                    <li><a href="#contact_div">Contact me</a></li>
+                </ul>
+            </nav>
+             
+        </header>
+         <img src="insta3.png" class="insta">
+        <div class="wrapper">
+            <div class="main">
+                <div class="box">
+                    <img src="insta1.png" id="image" name="insta1" class="img">
+
+                    <div class="desc">
+                        Need help shopping? Look no further, the Glossier Holiday Gift Guide has arrived 
+                    </div>
+
+                    <div class="like" id="like1">
+                        <button id="like_btn1"><i class="fa-solid fa-heart" ></i></button>
+                        <input id="input1" type="number" value="0" name="" class="input">
+                    </div>
+                   
+                    <div class="commentsection" id="comment-section1">
+                    </div>
+                    <form id="comment-form1" class="comment-form">
+                    <textarea id="comment1" rows="2" cols="30" class="comment" placeholder="Add a comment..."></textarea>
+                    <br>
+                    <button type="button" onclick="addComment1()" class="button1"><strong>Submit</strong></button>
+                    </form>
+
+
+                    
+                </div>
+                <div class="box">
+                    <img src="magazine.png" id="image" name="magazine" class="img">
+
+                    <div class="desc" style="width: 300px;">
+                        Did you get your Sunday paper yet?
+                    </div>
+
+                    <div class="like" id="like2">
+                        <button id="like_btn2"><i class="fa-solid fa-heart" ></i></button>
+                        <input id="input2" type="number" value="0" name="" class="input">
+                    </div>
+
+                    <div class="commentsection" id="comment-section1">
+                    </div>
+                    <form id="comment-form2" class="comment-form">
+                    <textarea id="comment2" rows="2" cols="30" class="comment" placeholder="Add a comment..."></textarea>
+                    <br>
+                    <button type="button" onclick="addComment2()" class="button1"><strong>Submit</strong></button>
+                    </form>
+
+                    
+                </div>
+                <div class="box">
+                    <img src="zena.png" id="image" name="zena" class="img">
+
+                    <div class="desc">
+                        Our @shai_sulivan wears Ultralip in Cranberry (a crimson-berry red). 
+                     </div>
+
+                    <div class="like" id="like3">
+                        <button id="like_btn3"><i class="fa-solid fa-heart" ></i></button>
+                        <input id="input3" type="number" value="0" name="" class="input">
+                    </div>
+                   
+                    <div class="commentsection" id="comment-section3">
+                    </div>
+                    <form id="comment-form3" class="comment-form">
+                    <textarea id="comment3" rows="2" cols="30" class="comment" placeholder="Add a comment..."></textarea>
+                    <br>
+                    <button type="button" onclick="addComment3()" class="button1"><strong>Submit</strong></button>
+                    </form>
+
+                   
+                </div>
+            </div>
+        </div>
+        <div id="contact_div" class="footer">
+            <div id="text"><strong>My contact info</strong></div>
+            <div class="socials">
+                <a href="https://www.facebook.com/glossier/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i> </a>
+                <a href="https://www.instagram.com/glossier/?hl=en" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl"></i> </a>
+                <a href="https://twitter.com/glossier?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"></i> </a>
+                <i class="fa-solid fa-square-phone fa-2xl"></i>
+            </div>
+        </div>
+    </body>
+</html>
+        <script type="text/javascript" >
+            let like1=document.querySelector('#like_btn1');
+            let like2=document.querySelector('#like_btn2');
+            let like3=document.querySelector('#like_btn3');
+            let like4=document.querySelector('#like_btn4');
+            let like5=document.querySelector('#like_btn5');
+            let like6=document.querySelector('#like_btn6');
+
+            let input1=document.querySelector('#input1');
+            let input2=document.querySelector('#input2');
+            let input3=document.querySelector('#input3');
+            let input4=document.querySelector('#input4');
+            let input5=document.querySelector('#input5');
+            let input6=document.querySelector('#input6');
+
+            like1.addEventListener('click',()=>{
+                input1.value=parseInt(input1.value)+1;
+                like1.style.color="red";
+            })
+            like2.addEventListener('click',()=>{
+                input2.value=parseInt(input2.value)+1;
+                like2.style.color="red";
+            })
+            like3.addEventListener('click',()=>{
+                input3.value=parseInt(input3.value)+1;
+                like3.style.color="red";
+            })
+            like4.addEventListener('click',()=>{
+                input4.value=parseInt(input4.value)+1;
+                like4.style.color="red";
+            })
+            like5.addEventListener('click',()=>{
+                input5.value=parseInt(input5.value)+1;
+                like5.style.color="red";
+            })
+            like6.addEventListener('click',()=>{
+                input6.value=parseInt(input6.value)+1;
+                like6.style.color="red";
+            })
+        </script>
+    </body>
+</html>
