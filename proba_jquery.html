@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="foo">
+        Stefan te sakam mazhu moj so ti napraiv grdi nuggets izvini te sakam daddy choke me please
+    </div>
+    <p>
+        Stefan te sakam
+    </p>
+    <p>
+        Stefan te sakam mnogu
+    </p>
+    <p>
+        Stefan te sakam najmnogu
+    </p>
+
+    <button id="click">Click me</button>
+    <div id="photo" style="width: 100px; height: 100px; background-color: blue;"></div>
+
+    <script>
+        $('#foo').on('click', function(event) {
+        alert('This will be displayed only once.');
+        $(this).off(event);
+        
+});
+$('#foo').trigger('click');
+
+        $("p").on({
+            mouseover: function(){
+                $("body").css("background-color", "lightgray")
+            },
+            mouseout: function(){
+        $("body").css("background-color", "lightblue");
+            },
+        click: function(){
+        $("body").css("background-color", "yellow");
+        }
+
+    });
+
+
+
+    $('#click').click(function() {
+        $('#photo').animate({
+        opacity: 0.25,
+        left: '+=50',
+        height: 'toggle'
+        }, 5000, function() {
+        alert('Animation complete.');
+        });
+    });
+    </script>
+</body>
+</html>
